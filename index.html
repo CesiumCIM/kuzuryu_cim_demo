@@ -194,6 +194,40 @@ const mainModels = [
     url: 'https://ideacon.ent.box.com/embed/s/ipk7viw5rtro5qt6yg3xr6o6w6nun553/folder/324655414834'
   },
   {
+    id: 3464732,
+    title: 'ダム下流巡視 新河原',
+    detail: 'ダム下流巡視記録-PDF閲覧',
+    label: 'ダム下流巡視 新河原',
+    url: 'https://ideacon.ent.box.com/embed/s/uniqs5ytya2isus8jcuw4uxy5rknld3o/folder/326285032770'
+  },
+  {
+    id: 3464448,
+    title: '※20',
+    detail: 'v',
+    label: '※20 湖面巡視',
+    url: 'https://ideacon.ent.box.com/embed/s/80nwqw6djzun1kh4c398344ti72qqc0g/folder/324768837315'
+  },
+  {
+    id: 3464440,
+    title: '※3',
+    detail: '湖面巡視記録-PDF閲覧',
+    label: '※3 湖面巡視',
+    url: 'https://ideacon.ent.box.com/embed/s/jyesejlph8snctrfo8098nfg63lw6e7r/folder/324765440799'
+  },
+  {
+    id: 3464434,
+    title: '※13',
+    detail: '湖面巡視記録-PDF閲覧',
+    label: '※13 湖面巡視',
+    url: 'https://ideacon.ent.box.com/embed/s/yr1x0b25amkeynzaqs31ndf1dnexu5j6/folder/324764121450'
+  },  {
+    id: 3464427,
+    title: '※5',
+    detail: '湖面巡視記録-PDF閲覧',
+    label: '※5 湖面巡視',
+    url: 'https://ideacon.ent.box.com/embed/s/14mdnase7xvt0vv7is1f9bpyx610p9s9/folder/324765550956'
+  },
+  {
     id: 3455598,
     title: '※2 No.24付近林谷橋上流',
     detail: '湖面巡視記録-PDF閲覧',
@@ -244,6 +278,8 @@ mainModels.forEach(model => {
         labelColor = Cesium.Color.RED;  // 警報局舎は赤
       } else if (model.label.includes('湖面巡視')) {
         labelColor = Cesium.Color.BLUE; // 湖面巡視は青
+      }else if (model.label.includes('下流巡視')) {
+        labelColor = Cesium.Color.DARKGREEN; // 下流巡視は緑
       }
 
       const labelEntity = viewer.entities.add({
@@ -346,7 +382,7 @@ treeContainer.style.display = 'none';
           name: '巡視・ダム設備 (仮)', children: [
             { name: '九頭竜川巡視ルート ', id: 3463131 },
             { name: '九頭竜川巡視点 ', id: 0 },
-            { name: '九頭竜川ダム放流警戒設備', id: 0 },
+            { name: '九頭竜川ダム放流警戒設備(仮）', id:3455251 },
             { name: '真名川巡視ルート', id: 3463133 },
             { name: '真名川巡視点', id: 0 },
             { name: '真名川ダム放流警戒設備', id: 0 },
